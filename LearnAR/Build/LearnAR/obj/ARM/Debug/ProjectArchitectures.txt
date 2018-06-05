@@ -1,0 +1,4 @@
+C:\VEERESH\SJSU\SJSUCourseWork\FourthSemester(Spring2018)\Project295-B\LearnAR-new\LearnAR\Build\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;arm
+C:\VEERESH\SJSU\SJSUCourseWork\FourthSemester(Spring2018)\Project295-B\LearnAR-new\LearnAR\Build\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;arm
+C:\VEERESH\SJSU\SJSUCourseWork\FourthSemester(Spring2018)\Project295-B\LearnAR-new\LearnAR\Build\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;arm
+C:\VEERESH\SJSU\SJSUCourseWork\FourthSemester(Spring2018)\Project295-B\LearnAR-new\LearnAR\Build\LearnAR\LearnAR.csproj;arm

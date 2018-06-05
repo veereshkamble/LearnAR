@@ -1,0 +1,22 @@
+<annotation>
+  <folder>voltage_src</folder>
+  <filename>bat433.jpg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>337</width>
+    <height>700</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Battery</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>67</xmin>
+      <ymin>403</ymin>
+      <xmax>150</xmax>
+      <ymax>486</ymax>
+    </bndbox>
+  </object>
+</annotation>

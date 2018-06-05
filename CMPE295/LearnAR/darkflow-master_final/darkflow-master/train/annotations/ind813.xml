@@ -1,0 +1,22 @@
+<annotation>
+  <folder>Inductors</folder>
+  <filename>ind813.jpeg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>329</width>
+    <height>166</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>inductor</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>93</xmin>
+      <ymin>29</ymin>
+      <xmax>158</xmax>
+      <ymax>51</ymax>
+    </bndbox>
+  </object>
+</annotation>

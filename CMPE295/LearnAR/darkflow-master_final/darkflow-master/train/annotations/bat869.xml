@@ -1,0 +1,22 @@
+<annotation>
+  <folder>Battery</folder>
+  <filename>bat869.jpeg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>186</width>
+    <height>198</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Battery</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>42</xmin>
+      <ymin>90</ymin>
+      <xmax>72</xmax>
+      <ymax>121</ymax>
+    </bndbox>
+  </object>
+</annotation>

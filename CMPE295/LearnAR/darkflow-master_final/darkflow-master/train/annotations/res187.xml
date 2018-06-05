@@ -1,0 +1,22 @@
+<annotation>
+  <folder>resistor</folder>
+  <filename>res187.jpeg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>565</width>
+    <height>395</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>resistor</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>228</xmin>
+      <ymin>173</ymin>
+      <xmax>260</xmax>
+      <ymax>230</ymax>
+    </bndbox>
+  </object>
+</annotation>

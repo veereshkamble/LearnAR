@@ -1,0 +1,22 @@
+<annotation>
+  <folder>Capacitor</folder>
+  <filename>cap0057.jpeg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>323</width>
+    <height>206</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>Capacitor</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>234</xmin>
+      <ymin>138</ymin>
+      <xmax>262</xmax>
+      <ymax>171</ymax>
+    </bndbox>
+  </object>
+</annotation>

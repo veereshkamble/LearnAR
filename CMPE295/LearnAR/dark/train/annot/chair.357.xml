@@ -1,0 +1,22 @@
+<annotation>
+  <folder>chairimg</folder>
+  <filename>chair.357.jpg</filename>
+  <segmented>0</segmented>
+  <size>
+    <width>227</width>
+    <height>227</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>chair</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>37</xmin>
+      <ymin>2</ymin>
+      <xmax>192</xmax>
+      <ymax>223</ymax>
+    </bndbox>
+  </object>
+</annotation>

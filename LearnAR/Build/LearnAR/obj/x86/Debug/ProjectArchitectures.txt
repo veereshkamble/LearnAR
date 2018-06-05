@@ -1,0 +1,1 @@
+D:\gitrepos\LearnAR\LearnAR\Build\LearnAR\LearnAR.csproj;x86

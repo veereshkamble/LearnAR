@@ -1,0 +1,93 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/stereolux/cordovarduino.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/stereolux/cordovarduino.git",
+        "spec": "git+https://github.com/stereolux/cordovarduino.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:stereolux/cordovarduino.git",
+          "sshUrl": "git+ssh://git@github.com/stereolux/cordovarduino.git",
+          "httpsUrl": "git+https://github.com/stereolux/cordovarduino.git",
+          "gitUrl": "git://github.com/stereolux/cordovarduino.git",
+          "shortcut": "github:stereolux/cordovarduino",
+          "directUrl": "https://raw.githubusercontent.com/stereolux/cordovarduino/master/package.json"
+        }
+      },
+      "C:\\VEERESH\\SJSU\\SJSUCourseWork\\FourthSemester(Spring2018)\\Project295-B\\LearnAR-new\\CircuitCaptureApp\\CircuitCaptureApp\\node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/stereolux/cordovarduino.git",
+  "_id": "cordovarduino@0.0.8",
+  "_inCache": true,
+  "_location": "/cordovarduino",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/stereolux/cordovarduino.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/stereolux/cordovarduino.git",
+    "spec": "git+https://github.com/stereolux/cordovarduino.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:stereolux/cordovarduino.git",
+      "sshUrl": "git+ssh://git@github.com/stereolux/cordovarduino.git",
+      "httpsUrl": "git+https://github.com/stereolux/cordovarduino.git",
+      "gitUrl": "git://github.com/stereolux/cordovarduino.git",
+      "shortcut": "github:stereolux/cordovarduino",
+      "directUrl": "https://raw.githubusercontent.com/stereolux/cordovarduino/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/stereolux/cordovarduino.git#223eb2bc8f78e660475964f327b424711081529b",
+  "_shasum": "c25b99cb26a9332607e0a6ab8c377d14e510cf49",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/stereolux/cordovarduino.git",
+  "_where": "C:\\VEERESH\\SJSU\\SJSUCourseWork\\FourthSemester(Spring2018)\\Project295-B\\LearnAR-new\\CircuitCaptureApp\\CircuitCaptureApp\\node_modules",
+  "author": {
+    "name": "Xavier Seignard",
+    "email": "xavier.seignard@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/xseignard/cordovarduino/issues"
+  },
+  "cordova": {
+    "id": "fr.drangies.cordova.serial",
+    "platforms": [
+      "android",
+      "ubuntu"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin to communicate with the android USB serial port",
+  "devDependencies": {},
+  "gitHead": "223eb2bc8f78e660475964f327b424711081529b",
+  "homepage": "https://github.com/xseignard/cordovarduino#readme",
+  "keywords": [
+    "serial",
+    "arduino",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ubuntu"
+  ],
+  "license": "MIT",
+  "name": "cordovarduino",
+  "optionalDependencies": {},
+  "readme": "## cordovarduino\r\n\r\nWant a module for your Arduino board that provides:\r\n\r\n- Power\r\n- High-res Touch Interface\r\n- Storage\r\n- *AND* connectivity? (WiFi + 3G + Bluetooth)\r\n\r\nHey, why not just use your Android phone/tablet? \r\n\r\nThis Cordova/Phonegap plugin allows two-way serial communication using *USB On-The-Go* (OTG) from your Android device to your Arduino board or other USB-powered serial IO device. \r\n\r\nAnd that means that ability to give your Arduino project a mobile app (web-view) interface as well as powering it using the rechargeable battery on your phone!\r\n\r\n### Install it\r\nFrom the root folder of your cordova project, run :\r\n```\r\ncordova plugin add cordovarduino\r\n```\r\n\r\n### How to use it\r\n\r\nYour first need to understand how to create and upload a simple Cordova Project. Here is some info on [how to get started](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html) with Cordova on Android, and here is a [simple Cordova plugin](https://github.com/apache/cordova-plugin-vibration) you can use to get familiar with the plugin system.\r\n\r\nThe plugin API for this behaves as follows:\r\n\r\nBecause you're polite, first request the permission to use the serial port to the system:\r\n```js\r\nserial.requestPermission(function success(), function error());\r\n```\r\nYou can now open the serial port:\r\n```js\r\nserial.open(opts, function success(), function error());\r\n```\r\n`opts` is a JSON object with the following properties:\r\n\r\n- baudRate: defaults to 9600\r\n- dataBits: defaults to 8\r\n- stopBits: defaults to 1\r\n- parity: defaults to 0\r\n- dtr: defaults to false (it may be needed to be true for some arduino)\r\n- rts: defaults to false (it may be needed to be true for some modules, including the monkeyboard dab module)\r\n- sleepOnPause: defaults to true. If false, the the OTG port will remain open when the app goes to the background (or the screen turns off). Otherwise, the port with automatically close, and resume once the app is brought back to foreground.\r\n\r\nYou're now able to read and write:\r\n```js\r\nserial.write(data, function success(), function error());\r\nserial.read(function success(buffer), function error());\r\n```\r\n`data` is the string representation to be written to the serial port.\r\n`buffer` is a JavaScript ArrayBuffer containing the data that was just read.\r\n\r\nApart from using `serial.write`, you can also use `serial.writeHex` to have an easy way to work with **RS232 protocol** driven hardware from your javascript by using **hex-strings**.\r\n\r\nIn a nutshell, `serial.writeHex('ff')` would write just a single byte where `serial.write('ff')` would let java write 2 bytes to the serial port.\r\n\r\nApart from that, `serial.writeHex` works the same way as `serial.write` does.\r\n\r\nRegister a callback that will be invoked when the driver reads incoming data from your serial device. The success callback function will recieve an ArrayBuffer filled with the data read from serial:\r\n```js\r\nserial.registerReadCallback(\r\n\tfunction success(data){\r\n\t\tvar view = new Uint8Array(data);\r\n\t\tconsole.log(view);\r\n\t},\r\n\tfunction error(){\r\n\t\tnew Error(\"Failed to register read callback\");\r\n\t});\r\n```\r\n\r\n\r\n\r\nAnd finally close the port:\r\n```js\r\nserial.close(function success(), function error())\r\n```\r\n\r\n### A Simple Example\r\n\r\nA callback-ish example.\r\n\r\n```js\r\nvar errorCallback = function(message) {\r\n    alert('Error: ' + message);\r\n};\r\n\r\nserial.requestPermission(\r\n\tfunction(successMessage) {\r\n    \tserial.open(\r\n        \t{baudRate: 9600},\r\n            function(successMessage) {\r\n        \t\tserial.write(\r\n                \t'1',\r\n                    function(successMessage) {\r\n                    \talert(successMessage);\r\n                    },\r\n                    errorCallback\r\n        \t\t);\r\n        \t},\r\n        \terrorCallback\r\n    \t);\r\n    },\r\n    errorCallback\r\n);\r\n```\r\n\r\n### A Complete Example\r\n\r\nHere is your `index.html`:\r\n\r\n```html\r\n<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *\">\r\n        <meta name=\"format-detection\" content=\"telephone=no\">\r\n        <meta name=\"msapplication-tap-highlight\" content=\"no\">\r\n        <meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width\">\r\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/index.css\">\r\n        <title>Hello World</title>\r\n    </head>\r\n    <body>\r\n        <div class=\"app\">\r\n            <h1>Potentiometer value</h1>\r\n            <p>Value <span id=\"pot\">...</span></p>\r\n            <p id=\"delta\">...</p>\r\n            <button id=\"on\">On</button>\r\n            <button id=\"off\">Off</button>\r\n        </div>\r\n        <script type=\"text/javascript\" src=\"cordova.js\"></script>\r\n        <script type=\"text/javascript\" src=\"js/index.js\"></script>\r\n    </body>\r\n</html>\r\n```\r\n\r\nHere is the `index.js` file:\r\n\r\n```js\r\nvar app = {\r\n    initialize: function() {\r\n        document.addEventListener('deviceready', this.onDeviceReady, false);\r\n    },\r\n    onDeviceReady: function() {\r\n        var potText = document.getElementById('pot');\r\n        var delta = document.getElementById('delta');\r\n        var on = document.getElementById('on');\r\n        var off = document.getElementById('off');\r\n        var open = false;\r\n        var str = '';\r\n        var lastRead = new Date();\r\n\r\n        var errorCallback = function(message) {\r\n            alert('Error: ' + message);\r\n        };\r\n        // request permission first\r\n        serial.requestPermission(\r\n            // if user grants permission\r\n            function(successMessage) {\r\n                // open serial port\r\n                serial.open(\r\n                    {baudRate: 9600},\r\n                    // if port is succesfuly opened\r\n                    function(successMessage) {\r\n                        open = true;\r\n                        // register the read callback\r\n                        serial.registerReadCallback(\r\n                            function success(data){\r\n                                // decode the received message\r\n                                var view = new Uint8Array(data);\r\n                                if(view.length >= 1) {\r\n                                    for(var i=0; i < view.length; i++) {\r\n                                        // if we received a \\n, the message is complete, display it\r\n                                        if(view[i] == 13) {\r\n                                            // check if the read rate correspond to the arduino serial print rate\r\n                                            var now = new Date();\r\n                                            delta.innerText = now - lastRead;\r\n                                            lastRead = now;\r\n                                            // display the message\r\n                                            var value = parseInt(str);\r\n                                            pot.innerText = value;\r\n                                            str = '';\r\n                                        }\r\n                                        // if not, concatenate with the begening of the message\r\n                                        else {\r\n                                            var temp_str = String.fromCharCode(view[i]);\r\n                                            var str_esc = escape(temp_str);\r\n                                            str += unescape(str_esc);\r\n                                        }\r\n                                    }\r\n                                }\r\n                            },\r\n                            // error attaching the callback\r\n                            errorCallback\r\n                        );\r\n                    },\r\n                    // error opening the port\r\n                    errorCallback\r\n                );\r\n            },\r\n            // user does not grant permission\r\n            errorCallback\r\n        );\r\n\r\n        on.onclick = function() {\r\n            console.log('click');\r\n            if (open) serial.write('1');\r\n        };\r\n        off.onclick = function() {\r\n            if (open) serial.write('0');\r\n        }\r\n    }\r\n};\r\n\r\napp.initialize();\r\n```\r\n\r\nAnd here is your Arduino project `.ino` file, with a potentiometer on A0 and a led on 13:\r\n\r\n```c\r\n#define POT A0\r\n#define LED 13\r\n\r\nunsigned long previousMillis;\r\nint interval = 50;\r\n\r\nvoid setup() {\r\n    Serial.begin(9600);\r\n    pinMode(POT, INPUT);\r\n    pinMode(LED, OUTPUT);\r\n}\r\n\r\nvoid loop() {\r\n    if (Serial.available() > 0) {\r\n        char i = Serial.read();\r\n        switch (i) {\r\n            case '0':\r\n                digitalWrite(LED, LOW);\r\n                break;\r\n            case '1':\r\n                digitalWrite(LED, HIGH);\r\n                break;\r\n        }\r\n    }\r\n    if (millis() - previousMillis >= interval) {\r\n        previousMillis = millis();\r\n        int value = analogRead(POT);\r\n        Serial.println(value);\r\n    }\r\n}\r\n```\r\n\r\n### Your Device is not (yet) known?\r\n\r\nThanks to [usb-serial-for-android](https://github.com/mik3y/usb-serial-for-android) library, you can communicate with CDC, FTDI, Arduino and other devices. \r\n\r\nYour device might not be listed over at https://github.com/mik3y/usb-serial-for-android .\r\nIf you know your devices VID (Vendor ID) and PID (Product ID) you could however try \r\n\r\n```js\r\nserial.requestPermission({vid: '1d50', pid: '607d'}, function success(), function error()); //hex strings\r\nor\r\nserial.requestPermission({vid: 7504, pid: 24701}, function success(), function error()); //integers\r\n```\r\n\r\nYou can also choose the driver to use. Options are:\r\n- `CdcAcmSerialDriver`\r\n- `Ch34xSerialDriver`\r\n- `Cp21xxSerialDriver`\r\n- `FtdiSerialDriver`\r\n- `ProlificSerialDriver`\r\n\r\n\r\nIt defaults to `CdcAcmSerialDriver` if empty or not one of these (please feel free to add a PR to support more).\r\n\r\n```js\r\nserial.requestPermission({\r\n        vid: '1d50',\r\n        pid: '607d',\r\n        driver: 'FtdiSerialDriver' // or any other\r\n    },\r\n    function success(),\r\n    function error()\r\n);\r\n```\r\n\r\nYou can find your devices VID and PID on linux or android using \"lsusb\" (returning VID:PID in hex) or by looking at your dmesg log.\r\n\r\n\r\n## Change log\r\n2015.10: [Ed. Lafargue](https://github.com/elafargue): Implemented \"sleepOnPause\" flag in the 'open' options to prevent closing the OTG port when app goes to background.\r\n\r\n2014.08: [Zevero](https://github.com/zevero): Option to find device by VID and PID, that let you use \"unrecognized\" devices.\r\n\r\n2014.07: [Hendrik Maus](https://github.com/hendrikmaus): Implemented writeHex for working with RS232 protocol, i.e. javascript can now pass \"ff\", java turns it into a 1 byte array and writes to the serial port - naturally, java, and the existing write method here, would create a 2 byte array from the input string.\r\n\r\n2014.04: [Derek K](https://github.com/etx): Implemented registerReadCallback for evented reading and Android onPause/onResume\r\n         \r\n2014.03: [Ed. Lafargue](https://github.com/elafargue): Implemented read(). The success callback returns a Javascript ArrayBuffer which is the best way to handle binary data in Javascript. It is straightforward to convert this to a string if required - a utility function could be implemented in this plugin.\r\n\r\n2013.11: [Xavier Seignard](https://github.com/xseignard): First implementation\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xseignard/cordovarduino.git"
+  },
+  "version": "0.0.8"
+}

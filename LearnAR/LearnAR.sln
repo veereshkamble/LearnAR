@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAR", "LearnAR.csproj", "{557B1A5F-470A-F6B6-93BB-730B187E8B82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAR.Plugins", "LearnAR.Plugins.csproj", "{AB340C1A-A16E-FA88-175D-625BD6C5EA01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnAR.Editor", "LearnAR.Editor.csproj", "{4244FC06-5249-C15F-5870-1A66268267AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{557B1A5F-470A-F6B6-93BB-730B187E8B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557B1A5F-470A-F6B6-93BB-730B187E8B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557B1A5F-470A-F6B6-93BB-730B187E8B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557B1A5F-470A-F6B6-93BB-730B187E8B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB340C1A-A16E-FA88-175D-625BD6C5EA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB340C1A-A16E-FA88-175D-625BD6C5EA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB340C1A-A16E-FA88-175D-625BD6C5EA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB340C1A-A16E-FA88-175D-625BD6C5EA01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4244FC06-5249-C15F-5870-1A66268267AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4244FC06-5249-C15F-5870-1A66268267AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4244FC06-5249-C15F-5870-1A66268267AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4244FC06-5249-C15F-5870-1A66268267AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
